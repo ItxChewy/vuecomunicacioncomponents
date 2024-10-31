@@ -4,14 +4,10 @@
       <li>
         <router-link to="/">Home</router-link>
       </li>
-      <li>
-        <router-link to="/deportes">Deportes</router-link>
-      </li>
       <li v-for="num in numeros" :key="num">
-        <router-link :to="'/numerodoble/' + num">Numero {{ num }}</router-link>
-      </li>
-      <li>
-        <router-link to="/numerodoble">Numero Doble</router-link>
+        <router-link :to="'/tablamultiplicar/' + num"
+          >Tabla {{ num }}</router-link
+        >
       </li>
     </ul>
   </div>
@@ -19,11 +15,19 @@
 
 <script>
 export default {
-  name: "MenuComponent",
+  name: "MenuTablaMultiplicar",
   data() {
     return {
-      numeros: [3, 2, 1, 67, 19],
+      numeros: [],
     };
+  },
+  mounted() {
+    var aux = [];
+    for (var i = 1; i <= 6; i++) {
+      var valor = Math.floor(Math.random() * 101);
+      aux.push(valor);
+    }
+    this.numeros = aux;
   },
 };
 </script>

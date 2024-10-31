@@ -1,19 +1,19 @@
 <template>
 <div>
-   <MenuComponent/>
+   <MenuTablaMultiplicar/>
   <router-view></router-view>
 </div>
 </template>
 
 <script>
-import MenuComponent from './components/MenuComponent.vue';
+import MenuTablaMultiplicar from './components/MenuTablaMultiplicar.vue';
 
 
 
 export default {
   name: "App",
   components: {
-    MenuComponent
+    MenuTablaMultiplicar
   },
 };
 </script>
